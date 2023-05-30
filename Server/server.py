@@ -40,8 +40,10 @@ def chckPrinter():
 @app.route('/logFiles', methods=['POST'])
 def log():
     print("Received a log req")
-    printerID = request.form.get('key')
-    fileName = request.form.get('value')
+    strs = request.get_data(as_text=True).split("\n")
+
+    printerID = strs[0]
+    fileName = strs[1]
     print("Printed file: ", fileName," at printer: ", printerID)
     return 'Logged successfully'
 

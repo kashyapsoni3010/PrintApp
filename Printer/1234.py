@@ -29,14 +29,14 @@ log.setLevel(logging.ERROR)
 # utility function for logging
 def logger(filename):
     url = 'http://127.0.0.1:8080/logFiles'
-    data = {printerID, filename}
-    response = request.post(url, data)
-    if response.status_code == 200:
-        # Request was successful
-        print(response.text)
-    else:
-        # Request failed
-        print('Request failed')
+    data = printerID+"\n"+ filename
+    response = requests.post(url, data)
+    # if response.status_code == 200:
+    #     # Request was successful
+    #     print(response.text)
+    # else:
+    #     # Request failed
+    #     print('Request failed')
 
 # Endpoint to upload file
 @app.route('/4321', methods=['POST'])

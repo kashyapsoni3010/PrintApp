@@ -1,0 +1,14 @@
+.pages{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+#left{
+    margin: auto;
+}
+
+#right{
+    margin: auto;
+}
